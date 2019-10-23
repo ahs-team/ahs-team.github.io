@@ -447,10 +447,12 @@ body {
       }
       #in4 {
         width: 65%;
+        margin-left: -2.5%;
       }
 
       #in5 {
         width: 25%;
+        margin-left: -2.5%;
       }
   }
   
