@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' type = 'text/css' href = './style.css'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset='utf-8'>
+    <title>Portfolio | AHS</title>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "100% ";
+        document.getElementById("main").style.marginLeft = "250px";
+        }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+      }
+    </script>
+    <script>
+      var myVar;
+
+      function myFunction() {
+        myVar = setTimeout(showPage, 1000);
+      }
+
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("portfolio").style.display = "block";
+        document.getElementById("main").style.display = "block";
+        document.getElementById("contact").style.display = "block";
+        document.getElementById("projects").style.display = "block";
+        document.getElementById("aboutme").style.display = "block";
+      }
+    </script>
+  </head>
+  <body onload="myFunction()" style="margin:0;">
+    <div id="loader"></div>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <div id="content">
+        <a href="#onama" onclick="closeNav()" >o nama</a>
+        <a href="#anes" onclick="closeNav()">anes</a>
+        <a href="#harun" onclick="closeNav()">harun</a>
+        <a href="#sanjin" onclick="closeNav()">sanjin</a>
+      </div>
+    </div>
+
+  <div style="display:none;" id="main" class='animate-bottom'>
+    <button class="openbtn" onclick="openNav()">☰</button>
+  </div>
+    <div style="display:none;" id="portfolio" class="animate-bottom mySlides">
+      <h1 style='text-align: right; font-size: 50px'>AHS</h1>
+      <div id='onama'>
+          <h3>O nama</h3>
+          <p> AHS je tim mladih web dizajnera nastao 2019. Sastoji se od tri programera
+            različitih sposobnosti i pozadina, svi pohađaju Gimnaziju u Tešnju i planiraju 
+            svoju karijeru nastaviti u ovom sektoru. 
+          </p>
+      </div>
+      <div id="names">
+        <div id='anes'>          
+          <h3> Anes </h3>
+            <p>
+              <b>IME: </b> Anes Hadžiedhemović <br>
+              <b>HOBIJI: </b>web dizajn i programiranje <br>
+              <b>ULOGA U AHS-u: </b>web dizajn i logo editor<br>
+              <b>PROGRAMSKI JEZICI:</b> HTML, CSS. 
+            </p>
+        </div>
+        <div id='harun'>
+          <h3>Harun</h3>
+            <p>
+              <b>IME: </b>Harun Bajrić <br>
+              <b>HOBIJI: </b> poezija, programiranje i web dizajn<br>
+              <b>ULOGA U AHS-u: </b>web dizajn i programer<br>
+              <b>PROGRAMSKI JEZICI :</b> HTML, CSS, PHP, Javascript, Python.
+            </p>
+        </div>
+        <div id='sanjin'>
+          <h3>Sanjin</h3>
+            <p>
+              <b>IME: </b> Sanjin Kršić <br>
+              <b>HOBIJI: </b> košarka i web dizajn<br>
+              <b>ULOGA U AHS-u: </b>web dizajn i editor teksta <br>
+              <b>PROGRAMSKI JEZICI:</b> HTML, CSS.
+            </p>
+        </div> 
+    </div>
+   <div id="contact">
+     <h3>Kontaktirajte nas</h3> <br><br>
+    <form action="https://formspree.io/maywqbrr" method="POST">
+      <input style = "width: 40%;" type="text" name="name" placeholder="Ime"> <br><br>
+      <input style = "width: 40%;"  type="email" name="_replyto" placeholder="E-mail"> <br><br>
+      <input style = "width: 40%;" type="text" name="subject" placeholder="Subject"><br><br>
+      <textarea style = "width: 42%;" name="message" rows = 8  placeholder="Vaša poruka..."></textarea><br><br>
+      <input type="submit" value="Pošalji"> <br><br>
+    </form>
+    </div>
+  </body>
+</html>
