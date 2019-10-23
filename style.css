@@ -35,7 +35,157 @@ body {
     text-decoration: none;
   }
   .sidebar a {
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Courier New", Courier, monospace;1
+
+​
+
+2
+
+<!DOCTYPE html>
+
+3
+
+<html>
+
+4
+
+    <head>
+
+5
+
+    <link rel='stylesheet' type = 'text/css' href = './style.css'/>
+
+6
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+7
+
+    <meta charset='utf-8'>
+
+8
+
+    <title>Portfolio | AHS</title>
+
+9
+
+    <script>
+
+10
+
+        function openNav() {
+
+11
+
+        document.getElementById("mySidebar").style.width = "100% ";
+
+12
+
+        document.getElementById("main").style.marginLeft = "250px";
+
+13
+
+        }
+
+14
+
+​
+
+15
+
+        function closeNav() {
+
+16
+
+        document.getElementById("mySidebar").style.width = "0";
+
+17
+
+        document.getElementById("main").style.marginLeft= "0";
+
+18
+
+        }
+
+19
+
+    </script>
+
+20
+
+    <script>
+
+21
+
+        var slideIndex = 1;
+
+22
+
+        showDivs(slideIndex);
+
+23
+
+​
+
+24
+
+        function plusDivs(n) {
+
+25
+
+        showDivs(slideIndex += n);
+
+26
+
+        }
+
+27
+
+​
+
+28
+
+        function showDivs(n) {
+
+29
+
+        var i;
+
+30
+
+        var x = document.getElementsByClassName("mySlides");
+
+31
+
+        if (n > x.length) {slideIndex = 1}
+
+32
+
+        if (n < 1) {slideIndex = x.length} ;
+
+33
+
+        for (i = 0; i < x.length; i++) {
+
+34
+
+        x[i].style.display = "none";
+
+35
+
+        }
+
+36
+
+        x[slideIndex-1].style.display = "block";
+
+37
+
+        }
+
+38
+
+    </script>
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 40px;
@@ -185,6 +335,27 @@ body {
         width: 40%;
         margin-left: 30%;
         margin-right: 30%;
+    }
+
+    #in1 {
+        width: 40%;
+    }
+    #in2 {
+        width: 40%;
+    }
+    
+    #in3 {
+        width: 40%; 
+        margin-left:-2.5%;
+    }
+
+    #in4 {
+        width: 40%; 
+        margin-left:-2.5%;
+    }
+
+    #in5 {
+        width: 15%;    
     }
   
   @media screen and (max-width: 600px) {
